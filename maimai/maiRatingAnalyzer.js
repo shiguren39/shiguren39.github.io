@@ -5,7 +5,7 @@ javascript:
 		j=['mai_inner_level_milk2.js',
 		   'calc_rating_test.js',
 		   'maiRatingAnalyzer_body.js'];
-		dom='https://sgimera.github.io/mai_RatingAnalyzer/scripts/';
+		dom='https://shiguren39.github.io/maimai/';
 		f=function(s,u)
 		{
 			if(j.length==0)
