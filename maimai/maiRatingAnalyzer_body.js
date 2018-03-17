@@ -508,10 +508,10 @@ function datalist_recalc()
 	
 	for(var i=0; i<listlength; i++)
 	{
-		datalist[i].lv[2]=uso_level(datalist[i].lv[2]);
+		datalist[i].lv[2]=true_level(datalist[i].lv[2]);
 		datalist[i].rate_values[2] = mra_arch2rate_100(datalist[i].achive[2], datalist[i].lv[2]);
 
-		datalist[i].lv[1]=uso_level(datalist[i].lv[1]);
+		datalist[i].lv[1]=true_level(datalist[i].lv[1]);
 		datalist[i].rate_values[1] = mra_arch2rate_100(datalist[i].achive[1], datalist[i].lv[1]);
 
 		// 曲別レート値の最大が変化するので再計算。
