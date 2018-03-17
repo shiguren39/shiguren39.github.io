@@ -500,6 +500,20 @@ function tweet_best(id)
 
 }
 
+function uso_level(lv)
+{
+	switch(lv.slice(-1))
+	{
+		case "+":
+		case "-":
+		case ")":
+			return lv;
+		default:
+			break;
+	}
+	var tmplv=mra_diff2tmp(lv);
+	return (tmplv>=13)?"13-":(tmplv>=12.7)?"12+":(tmplv>=12.3)?"12=":(tmplv>=12)?"12-":lv;
+}
 		
 	
 function datalist_recalc()
@@ -508,10 +522,10 @@ function datalist_recalc()
 	
 	for(var i=0; i<listlength; i++)
 	{
-		datalist[i].lv[2]=true_level(datalist[i].lv[2]);
+		datalist[i].lv[2]=uso_level(datalist[i].lv[2]);
 		datalist[i].rate_values[2] = mra_arch2rate_100(datalist[i].achive[2], datalist[i].lv[2]);
 
-		datalist[i].lv[1]=true_level(datalist[i].lv[1]);
+		datalist[i].lv[1]=uso_level(datalist[i].lv[1]);
 		datalist[i].rate_values[1] = mra_arch2rate_100(datalist[i].achive[1], datalist[i].lv[1]);
 
 		// 曲別レート値の最大が変化するので再計算。
